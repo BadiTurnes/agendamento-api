@@ -1,29 +1,9 @@
 # API Agendamento
+Esse é o projeto de portifólio pessoal, proposto na Mentória de teste 2.0 do Júlio de lima
+https://mentoria.juliodelima.com.br/
 
 ## Descrição
 A Agendamento API é uma aplicação desenvolvida em Node.js que permite aos usuários realizar agendamentos e consultar datas disponíveis para agendamento. A API é construída utilizando o framework Express e armazena os dados em memória.
-
-## Repositório GitHub
-
-O projeto está disponível em:  
-https://github.com/BadiTurnes/agendamento-api.git
-
-## Como publicar seu projeto no GitHub
-
-```bash
-# Inicialize o repositório local (se ainda não estiver inicializado)
-git init
-
-# Adicione o repositório remoto
-git remote add origin https://github.com/BadiTurnes/agendamento-api.git
-
-# Adicione todos os arquivos e faça o commit inicial
-git add .
-git commit -m "Commit inicial do projeto agendamento-api"
-
-# Envie para o GitHub
-git push -u origin master
-```
 
 ## Instalação
 1. Clone o repositório:
