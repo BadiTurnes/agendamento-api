@@ -1,0 +1,116 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Agendamento API",
+    "version": "1.0.0",
+    "description": "API para gerenciamento de agendamentos."
+  },
+  "servers": [
+    {
+      "url": "http://localhost:{port}",
+      "description": "Servidor local",
+      "variables": {
+        "port": {
+          "default": "3000"
+        }
+      }
+    }
+  ],
+  "paths": {
+    "/agendamentos": {
+      "post": {
+        "summary": "Realiza um agendamento",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "nome": {
+                    "type": "string"
+                  },
+                  "codigo": {
+                    "type": "string",
+                    "oneOf": [
+                      { "type": "string" },
+                      { "type": "number" }
+                    ]
+                  }
+                },
+                "required": ["nome", "codigo"]
+              }
+            }
+          },
+          "responses": {
+            "201": {
+              "description": "Agendamento criado com sucesso",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "nome": {
+                        "type": "string"
+                      },
+                      "codigo": {
+                        "type": "string"
+                      },
+                      "data": {
+                        "type": "string",
+                        "format": "date"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Erro de validação dos campos"
+            }
+          }
+        }
+      }
+    },
+    "/datas-disponiveis": {
+      "get": {
+        "summary": "Lista as datas disponíveis para agendamento",
+        "responses": {
+          "200": {
+            "description": "Lista de datas disponíveis",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "date"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Agendamento": {
+        "type": "object",
+        "properties": {
+          "nome": {
+            "type": "string"
+          },
+          "codigo": {
+            "type": "string"
+          },
+          "data": {
+            "type": "string",
+            "format": "date"
+          }
+        }
+      }
+    }
+  }
+}
