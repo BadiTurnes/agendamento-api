@@ -1,0 +1,27 @@
+{
+  "agNovo":{
+    "nome": "Marcos",
+    "codigo": "ag-A001",
+    "data": "25/08/2025"
+  },
+  "agExistente":{
+    "nome": "Ana",
+    "codigo": "ag-A002",
+    "data": "25/08/2024"
+  },
+  "dadosInvalida":{
+    "nome": "",
+    "codigo": "",
+    "data": "31/02/2024"
+  },
+  "dadosVazio":{
+    "nome": "",
+    "codigo": "",
+    "data": ""
+  },
+  "dataForaDoPeriodo":{
+    "nome": "Ana",
+    "codigo": "ag-A002",
+    "data": "20/08/2024"
+  }  
+}
