@@ -1,5 +1,5 @@
 # API Agendamento
-Esse é o projeto de portifólio pessoal, proposto na Mentória de teste 2.0 do Júlio de lima
+Esse é o projeto de portifólio pessoal, proposto na Mentória de teste 2.0 do Júlio de Lima
 https://mentoria.juliodelima.com.br/
 
 ## Descrição
